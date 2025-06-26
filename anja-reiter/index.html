@@ -1,0 +1,456 @@
+<!DOCTYPE html><html lang="de"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anja Reiter - Journalistin</title>
+    <meta name="description" content="Ich bin freie Journalistin für Bildung, Umwelt und Digitalisierung. Außerdem leite ich Workshops und arbeite als Moderatorin.">
+
+    <link href="images/favicon.ico" rel="shortcut icon">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/app.js"></script>
+
+    <!-- Plausible -->
+    <script async="" defer="" data-domain="anjareiter.com" src="js/plausible.js"></script>
+</head>
+<body class="font-serif text-2xl antialiased md:text-4xl 2xl:text-5xl">
+
+  <!-- Mobile menu -->
+  <nav class="fixed z-50 w-screen bg-white md:relative">
+    
+    <!-- Mobile menu button -->
+    <div class="px-4 sm:px-6">
+      <div class="flex float-right h-16">
+        <div class="flex items-center -mr-2 sm:hidden">
+          <button class="inline-flex items-center justify-center p-2 text-gray-400 rounded-md hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-300 focus:border-transparent" aria-expanded="false" onclick="navToggle();">
+            <span class="sr-only">Open main menu</span>
+            <!-- Hamburger (closed) -->
+            <svg id="mobilehamburger" class="block w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+            <!-- Cross (open) -->
+            <svg id="mobileclose" class="hidden w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile menu content -->
+    <div id="mobilemenu" class="hidden h-screen sm:hidden">
+      <div class="pt-16 pb-3 space-y-3 text-3xl text-center text-gray-900">
+        <a href="#portfolio" class="block py-2 pl-3 pr-4 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700" onclick="navToggle();">Portfolio</a>
+        <a href="#portrait" class="block py-2 pl-3 pr-4 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700" onclick="navToggle();">Porträt</a>
+        <a href="#journalismus" class="block py-2 pl-3 pr-4 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700" onclick="navToggle();">Journalismus</a>
+        <a href="#workshops" class="block py-2 pl-3 pr-4 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700" onclick="navToggle();">Workshop-Leitung</a>
+        <a href="#moderation" class="block py-2 pl-3 pr-4 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700" onclick="navToggle();">Moderation</a>
+        <a href="mailto:mail@anjareiter.com" class="block py-2 pl-3 pr-4 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700" onclick="navToggle();">Kontakt</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Landing -->
+  <div class="flex flex-col h-screen">
+    <div class="flex flex-col w-screen m-auto text-center h-1/3 xl:mt-48 2xl:mt-80">
+      <span class="invisible text-5xl text-gray-700 md:visible" aria-hidden="true">...</span>
+      <div class="flex flex-col items-center m-auto md:flex-row">
+        <h1 class="text-3xl text-gray-800 md:4text-xl lg:text-5xl xl:text-5xl">Journalistin. Anja Reiter</h1>
+        <a href="mailto:mail@anjareiter.com" class="mt-10 font-sans text-sm font-bold border-b border-transparent text-anjagreen hover:border-gray-800 md:mt-5 md:ml-20 md:mr-10 lg:ml-60">Mail</a>
+        <a href="https://www.torial.com/en/anja.reiter" class="order-first my-10 font-sans text-sm font-bold border-b border-transparent text-anjagreen hover:border-gray-800 md:mt-5 md:mb-0 md:mr-20 md:ml-10 lg:mr-60">Torial</a>
+      </div>
+      <span class="invisible text-5xl text-gray-700 md:visible" aria-hidden="true">...</span>
+    </div>
+    <div class="m-auto">
+      <a href="#about-me" title="Jump to portrait of Anja Reiter">
+        <svg alt="" role="presentation" class="w-8 h-8 text-gray-700 active:bg-none focus:bg-none hover:text-anjagreen animate-bounce md:w-12 md:h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
+      </a>    
+    </div>
+  </div>
+  
+  <!-- About me -->
+  <div id="about-me" class="flex flex-col w-full h-screen max-w-xs mx-auto text-center md:text-5xl xl:text-5xl 2xl:text-7xl justify-evenly md:max-w-5xl md:px-6">
+    <p><a href="#portrait">Ich bin <i class="hover:text-anjagreen">freie Journalistin</i> <sup class="font-sans text-lg text-anjagreen">(1)</sup></a>für Bildung, Umwelt und Digitalisierung.</p>
+    <p><a href="#workshops">Außerdem leite ich <i class="hover:text-blue-800">Workshops</i> <sup class="font-sans text-lg text-blue-800">(2)</sup></a>
+      <br><a href="#moderation">und arbeite als <i class="hover:text-red-500">Moderatorin</i> <sup class="font-sans text-lg text-red-500">(3)</sup></a>.</p>
+      <p class="mx-auto">
+      <a href="#portfolio" title="Jump to Portfolio of Anja Reiter">
+        <svg alt="" role="presentation" class="w-8 h-8 text-gray-700 hover:text-anjagreen animate-bounce md:w-12 md:h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
+      </a>    
+    </p>  
+  </div>
+
+  <!-- Portfolio -->
+  <div id="portfolio" class="relative px-4 pb-8 pt sm:px-6 xl:px-20 lg:px-8 2xl:pb-20 lg:pt-24 lg:pb-28">
+    <div class="relative mx-auto">
+      <div class="pb-2 text-center 2xl:pb-10">
+        <h2 class="text-5xl text-gray-900 md:text-6xl sm:text-5xl xl:text-7xl 2xl:text-8xl">
+          Portfolio
+        </h2>
+      </div>
+
+      <div class="grid max-w-lg gap-8 mx-auto md:mt-12 xl:gap-12 2xl:gap-16 md:grid-cols-2 xl:grid-cols-4 md:max-w-none">
+        <!-- Pudding -->
+        <div class="flex flex-col">
+          <a href="pdf/Esslernschule-Anja-Reiter.pdf" class="block mt-2 group">
+            <div class="flex-shrink-0">
+              <img loading="lazy" class="object-cover w-full group-hover:opacity-95" src="images/pudding.jpg" alt="">
+            </div>
+            <div class="flex-1 mt-4 leading-none bg-white md:mt-6 2xl:mt-8">
+              <p class="text-2xl text-gray-900 2xl:text-4xl 2xl:mb-6 group-hover:text-gray-600">
+                <span class="border-b border-transparent group-hover:border-gray-700">Magie des Puddings</span>
+              </p>
+              <p class="mt-3 text-base leading-snug text-gray-800 2xl:text-3xl group-hover:text-gray-600">
+                In Graz lernen Kinder mit Essstörungen dank einer spielerischen und antiautoritären Methode, wie verlockend Brei, Nudeln und Kekse sein können. Verbote gibt es dabei keine – ganz im Gegenteil
+              </p>
+              <p class="mt-4 font-sans text-xs font-bold text-gray-900 2xl:mt-10 md:text-sm 2xl:text-lg group-hover:text-gray-600">
+                  ZEIT Österreich 2019
+              </p>
+            </div>
+          </a>
+        </div>
+
+        <!-- Islam -->
+        <div class="flex flex-col">
+          <a href="pdf/O-koislam_final.pdf" class="block mt-2 group">
+            <div class="flex-shrink-0">
+              <img loading="lazy" alt="" role="presentation" class="object-cover w-full group-hover:opacity-95" src="images/muslima.jpg">
+            </div>
+            <div class="flex-1 mt-4 leading-none bg-white md:mt-6 2xl:mt-8">
+              <p class="text-3xl text-gray-900 2xl:text-5xl 2xl:mb-6 group-hover:text-gray-600">
+                <span class="border-b border-transparent group-hover:border-gray-700">Der grüne Islam</span>
+              </p>
+              <p class="mt-3 text-base text-gray-800 2xl:text-3xl group-hover:text-gray-600">
+                In Deutschland engagieren sich immer mehr junge Muslime für den Umweltschutz. Vor allem Frauen sind es, die den Koran ökologisch auslegen – und Einfluss entfalten
+              </p>
+              <p class="mt-4 font-sans text-xs font-bold text-gray-900 2xl:mt-10 md:text-sm 2xl:text-lg group-hover:text-gray-600">
+                Greenpeace Magazin 2019
+              </p>
+            </div>
+          </a>
+        </div>
+
+        <!-- Bikepacking -->
+        <div class="flex flex-col">
+          <a href="pdf/ZEIT_Bikepacking.pdf" class="block mt-2 group">
+            <div class="flex-shrink-0">
+              <img loading="lazy" alt="" role="presentation" class="object-cover w-full group-hover:opacity-95" src="images/bikepacking.jpg">
+            </div>
+            <div class="flex-1 mt-4 leading-none bg-white md:mt-6 2xl:mt-8">
+              <p class="text-3xl text-gray-900 2xl:text-5xl 2xl:mb-6 group-hover:text-gray-600">
+                <span class="border-b border-transparent group-hover:border-gray-700">Soll das ein Weg sein?</span>
+              </p>
+              <p class="mt-3 text-base text-gray-800 2xl:text-3xl group-hover:text-gray-600">
+                Je kleiner das Gepäck, desto größer die Freiheit. Wir radeln als Bikepacker querfeldein durch Slowenien. Auf der Suche nach dem sorglosen Glück landen wir mitten im Gestrüpp
+              </p>
+              <p class="mt-4 font-sans text-xs font-bold text-gray-900 2xl:mt-10 md:text-sm 2xl:text-lg group-hover:text-gray-600">
+                DIE ZEIT 2018
+              </p>
+            </div>
+          </a>
+        </div>
+
+        <!-- Versuchskaninchen -->
+        <div class="flex flex-col">
+          <a href="pdf/Digitale-Bildung-Anja-Reiter.pdf" class="block mt-2 group">
+            <div class="flex-shrink-0">
+              <img loading="lazy" alt="" role="presentation" class="object-cover w-full group-hover:opacity-95" src="images/versuchskaninchen.jpg">
+            </div>
+            <div class="flex-1 mt-4 leading-none bg-white md:mt-6 2xl:mt-8">
+              <p class="text-3xl text-gray-900 2xl:text-5xl 2xl:mb-6 group-hover:text-gray-600">
+                <span class="border-b border-transparent group-hover:border-gray-700">Versuchskaninchen</span>
+              </p>
+              <p class="mt-3 text-base text-gray-800 2xl:text-3xl group-hover:text-gray-600">
+                Laptop und Tablet statt Stift und Kreide: Das Internat Schloss Neubeuern rühmt sich, die erste digitale Schule Deutschlands zu sein
+              </p>
+              <p class="mt-4 font-sans text-xs font-bold text-gray-900 2xl:mt-10 md:text-sm 2xl:text-lg group-hover:text-gray-600">
+                ZEIT Österreich 2019
+              </p>
+            </div>
+          </a>
+        </div>
+
+        <!-- Schloss -->
+        <div class="flex flex-col">
+          <a href="pdf/Internat-Anja-Reiter.pdf" class="block mt-2 group">
+            <div class="flex-shrink-0">
+              <img loading="lazy" alt="" role="presentation" class="object-cover w-full group-hover:opacity-95" src="images/schloss.jpg">
+            </div>
+            <div class="flex-1 mt-4 leading-none bg-white md:mt-6 2xl:mt-8">
+              <p class="text-3xl text-gray-900 2xl:text-5xl 2xl:mb-6 group-hover:text-gray-600">
+                <span class="border-b border-transparent group-hover:border-gray-700">Die Stillen vom Schloss</span>
+              </p>
+              <p class="mt-3 text-base text-gray-800 2xl:text-3xl group-hover:text-gray-600">
+                Eine Schule in Nordrhein-Westfalen nimmt Jugendliche auf, wenn ihre Eltern zu Hause nicht mehr weiter wissen.</p>
+              <p></p>
+              <p class="mt-4 font-sans text-xs font-bold text-gray-900 2xl:mt-10 md:text-sm 2xl:text-lg group-hover:text-gray-600">
+                DIE ZEIT 2017
+              </p>
+            </div>
+          </a>
+        </div>
+
+        <!-- Fahren -->
+        <div class="flex flex-col">
+          <a href="pdf/Autonomes-Fahren-Anja-Reiter.pdf" class="block mt-2 group">
+            <div class="flex-shrink-0">
+              <img loading="lazy" alt="" role="presentation" class="object-cover w-full group-hover:opacity-95" src="images/fahren.jpg">
+            </div>
+            <div class="flex-1 mt-4 leading-none bg-white md:mt-6 2xl:mt-8">
+              <p class="text-3xl text-gray-900 2xl:text-5xl 2xl:mb-6 group-hover:text-gray-600">
+                <span class="border-b border-transparent group-hover:border-gray-700">“Ihr Auto wurde gehackt!”</span>
+              </p>
+              <p class="mt-3 text-base text-gray-800 2xl:text-3xl group-hover:text-gray-600">
+                Selbstfahrende Autos sollen den Verkehr sicherer machen. Experten warnen jedoch vor großen Sicherheitslücken. Müssen wir uns vor Hacking-Attacken führchten?
+              </p>
+              <p class="mt-4 font-sans text-xs font-bold text-gray-900 2xl:mt-10 md:text-sm 2xl:text-lg group-hover:text-gray-600">
+                DIE ZEIT 2019
+              </p>
+            </div>
+          </a>
+        </div>
+
+        <!-- Trotzkopf -->
+        <div class="flex flex-col">
+          <a href="pdf/Gregor-Demblin-Anja-Reiter.pdf" class="block mt-2 group">
+            <div class="flex-shrink-0">
+              <img loading="lazy" alt="" role="presentation" class="object-cover w-full group-hover:opacity-95" src="images/trotzkopf.jpg">
+            </div>
+            <div class="flex-1 mt-4 leading-none bg-white md:mt-6 2xl:mt-8">
+              <p class="text-3xl text-gray-900 2xl:text-5xl 2xl:mb-6 group-hover:text-gray-600">
+                <span class="border-b border-transparent group-hover:border-gray-700">Der Trotzkopf</span>
+              </p>
+              <p class="mt-3 text-base text-gray-800 2xl:text-3xl group-hover:text-gray-600">
+                Gregor Demblin ist Manager von zwei Unternehmen. Seinen Rollstuhl hat er dabei zum Werbemittel gemacht.
+              </p>
+              <p class="mt-4 font-sans text-xs font-bold text-gray-900 2xl:mt-10 md:text-sm 2xl:text-lg group-hover:text-gray-600">
+                ZEIT Österreich 2017
+              </p>
+            </div>
+          </a>
+        </div>
+
+        <!-- Pflegen -->
+        <div class="flex flex-col">
+          <a href="pdf/EwigesPflegen.pdf" class="block mt-2 group">
+            <div class="flex-shrink-0">
+              <img loading="lazy" alt="" role="presentation" class="object-cover w-full group-hover:opacity-95" src="images/pflegen.jpg">
+            </div>
+            <div class="flex-1 mt-4 leading-none bg-white md:mt-6 2xl:mt-8">
+              <p class="text-3xl text-gray-900 2xl:text-5xl 2xl:mb-6 group-hover:text-gray-600">
+                <span class="border-b border-transparent group-hover:border-gray-700">Ewiges Pflegen</span>
+              </p>
+              <p class="mt-3 text-base text-gray-800 2xl:text-3xl group-hover:text-gray-600">
+                Wer Verantwortung für seine greisen Eltern übernimmt, weiß nie, was noch kommt. Manche verzweifeln daran.
+              </p>
+              <p class="mt-4 font-sans text-xs font-bold text-gray-900 2xl:mt-10 md:text-sm 2xl:text-lg group-hover:text-gray-600">
+                Süddeutsche Zeitung 2017
+              </p>
+            </div>
+          </a>
+        </div>
+                
+      </div>
+    </div>
+  </div>
+
+  <!-- Porträt -->
+  <div id="portrait" class="px-4 pt-24 sm:px-6 xl:px-20 lg:px-8">
+    <h2 class="pb-8 text-5xl text-center text-gray-900 md:text-left 2xl:text-8xl sm:text-6xl">
+      Porträt
+    </h2>
+  </div>
+  <div class="flex flex-col lg:flex-row">
+    <div class="px-4 sm:px-6 lg:px-8 xl:px-20 lg:w-1/2">
+      <span class="font-sans text-sm font-bold text-anjagreen">Über mich</span>
+      <p class="max-w-screen-xl pb-12 mt-6 xl:mt-6">
+        Freie Journalistin, Moderatorin, Dozentin und Seminarleiterin. Suche den Menschen hinter der Idee und die Geschichte hinter den Zahlen. In Graz geboren, an München mein Herz verloren. Von hier aus beliefere ich Redaktionen mit Reportagen, Porträts und Features – über Bildung, Digitales, Umwelt und Fahrräder.
+      </p>
+      <span class="font-sans text-sm font-bold text-anjagreen 2xl:mt-12">Kontakt</span>
+      <p class="max-w-screen-xl mt-6 xl:mt-6">
+        Nachrichten an <a class="italic text-gray-400 border-b border-gray-800 hover:text-gray-600" href="mail@anjareiter.com">mail@anjareiter.com</a>. Vertreten bin ich auch auf <a class="italic text-gray-400 border-b border-gray-800 hover:text-gray-600" href="https://twitter.com/die_anjuschka">twitter</a> und <a class="italic text-gray-400 border-b border-gray-800 hover:text-gray-600" href="https://www.torial.com/anja.reiter">torial</a>. Außerdem bin ich Teil der <a class="italic text-gray-400 border-b border-gray-800 hover:text-gray-600" href="https://www.freischreiber.de/profiles/anja-reiter/">Freischreiber</a>, dem Berufsverband für freie Journalisten und Journalistinnen.
+      </p>
+    </div>
+    <div class="items-center order-first inline-block pb-16 align-middle md:max-w-xl lg:w-1/2 2xl:max-w-none lg:order-none 2xl:-mt-20 xl:ml-20 2xl:ml-36 md:pb-0">
+      <figure class="portrait">
+        <img loading="lazy" class="w-full md:pb-16 lg:absolute lg:w-1/4 first xl:mt-20" src="images/portrait-1.jpg" alt="">
+        <img loading="lazy" class="items-start second h-2/3 2xl:h-full" src="images/portrait-2.jpeg" alt="">
+      </figure>
+    </div>
+  </div>
+
+  <!-- Freie Journalistin -->
+  <div id="journalismus" class="flex flex-col items-center px-4 mt-24 md:mt-0 lg:flex-row 2xl:mt-64 lg:px-12">
+    <div class="lg:w-1/2">
+      <h2>
+        <span class="align-middle text-anjagreen">■ </span>
+        <span class="text-4xl italic align-middle md:text-5xl 2xl:text-7xl text-anjagreen">Ich bin Journalistin</span> 
+        <span class="font-sans font-bold align-top"><small>(1)</small></span>
+      </h2>
+      <p class="mt-6">
+        Ich liebe gute Geschichten – und bin ständig auf der Suche nach ihnen. Ich feierte schon mit  Musliminnen plastikfrei Ramadan und übernachtete mit Schulverweigerern in einem Internat. Mich interessiert, was Algorithmen in der öffentlichen Verwaltung anrichten können – und wie digital Deutschlands Schulen unterrichten.
+      </p>
+      <p class="mt-6 xl:mt-20">
+        Manchmal jage ich den Geschichten auch auf dem Fahrrad nach: Für eine Reisereportage kämpfte ich mich mit leichtem Gepäck durch das slowenische Gestrüpp – auf der Suche nach der großen Freiheit. Und weil Freisein wirklich super ist, habe ich mich als freie Journalistin selbstständig gemacht.
+      </p>
+    </div>
+    <div class="order-first lg:w-1/2">
+      <figure>
+        <img loading="lazy" alt="" role="presentation" class="m-auto mt-10 xl:p-24" src="images/journalistin.png">
+      </figure>
+    </div>
+  </div>
+
+  <!-- Referenzen -->
+  <div class="flex flex-col items-center px-4 mt-12 lg:flex-row xl:mt-32 lg:px-12">
+    <div class="lg:w-1/2">
+      <h2>
+        <span class="align-middle text-anjagreen">■ </span>
+        <span class="text-3xl italic align-middle text-anjagreen md:text-4xl 2xl:text-6xl">Referenzen</span> 
+      </h2>
+      <span class="block mt-6 font-sans text-sm font-bold lg:text-xl text-anjagreen">Journalismus</span>
+      <p class="pb-12 mx-auto mt-6 text-center md:text-left">
+        DIE ZEIT • ZEIT Österreich • ZEIT Online • Süddeutsche Zeitung • Greenpeace Magazin • enorm • TOUR • MYBIKE • Berliner Tagesspiegel • Münchner Merkur • Megaphon • Spiegel online • absatzwirtschaft • WIRED • LEAD digital • behinderte menschen • Uniglobale • Moskauer Deutsche Zeitung • Falter • Weltseher      </p>
+      <span class="font-sans text-sm font-bold lg:text-xl text-anjagreen">Corporate</span>
+      <p class="mx-auto mt-6 text-center md:text-left">
+        Bernd Seidel & Friends • ag text • Bayerische Akademie der Wissenschaften • Humboldt-Stiftung • Fresenius Medical Care • Forum Bildung Digitalisierung  • Wirtschaftsjunioren Deutschland e.V. • Masterplan
+      </p>
+    </div>
+    <div class="order-first max-w-4xl lg:w-1/2 lg:order-none lg:ml-32">
+      <figure>
+        <img loading="lazy" alt="" role="presentation" class="mx-auto md:h-auto" src="images/referenzen.png">
+      </figure>
+    </div>
+  </div>
+
+  <!-- Workshops -->
+  <div id="workshops" class="flex flex-col items-center px-4 mt-12 lg:flex-row lg:px-12">
+    <div class="lg:w-1/2">
+      <h2>
+        <span class="text-blue-800 align-middle">■ </span>
+        <span class="text-4xl italic text-blue-800 align-middle md:text-5xl 2xl:text-7xl">Ich leite Workshops</span> 
+        <span class="font-sans font-bold align-top"><small>(2)</small></span>
+      </h2>
+      <p class="mt-6">
+        Wie verfasst man ein unwiderstehliches Exposé? Wie antwortet man auf kritische Journalisten-Fragen? Und wie verwandelt man langatmige Zitate in Geschichten, die jeder gerne liest?
+      </p>
+      <p class="mt-6 xl:mt-20">
+        Als Redakteurin der „Freienbibel 2“ bin ich Expertin für journalistisches Handwerkszeug und freiberufliche Selbstorganisation. In Workshops und Seminaren gebe ich mein Wissen an andere weiter. Auf Anfrage biete ich maßgeschneiderte Trainings an, etwa für die Themenkomplexe <span class="text-blue-800">•</span> <span class="italic text-gray-500">Erfolgreich frei</span> <span class="text-blue-800">•</span> <span class="italic text-gray-500">Professionell texten</span> <span class="text-blue-800">•</span> <span class="italic text-gray-500">Spannend über Wirtschaft schreiben</span> <span class="text-blue-800">•</span> <span class="italic text-gray-500">Interviews geben</span>.
+      </p>
+      <p class="mt-6">
+        <span class="italic text-blue-800">Referenzen</span> — Akademie der Bayerischen Presse —FH JOANNEUM — Leuphana-Universität Lüneburg — Freischreiber — Alumni-Verein des Elite-Studiengangs Osteuropastudien
+      </p>  
+    </div>
+    <div class="order-first lg:w-1/2">
+      <figure>
+        <img loading="lazy" alt="" role="presentation" class="m-auto mt-10 xl:p-24" src="images/workshops.png">
+      </figure>
+    </div>
+  </div>
+  
+  <!-- Moderation -->
+  <div id="moderation" class="flex flex-col items-center px-4 mt-12 lg:flex-row lg:px-12 md:mt-20 2xl:mt-0">
+    <div class="lg:w-1/2">
+      <h2>
+        <span class="text-red-400 align-middle">■ </span>
+        <span class="text-4xl italic text-red-400 align-middle md:text-5xl 2xl:text-7xl">Ich moderiere</span> 
+        <span class="font-sans font-bold align-top"><small>(3)</small></span>
+      </h2>
+      <p class="pb-6 mt-6">
+        Fragen stellen – das mache ich nicht nur für mein Notizbuch, sondern auch auf der Bühne. Als Moderatorin bei Podiumsdiskussionen sehe ich mich als Sprachrohr des Publikums: Ich kitzle strittige Punkte hervor, wo vordergründig lahme Einigkeit herrscht. Ich unterbreche, wo Monologe die ersten Zuhörer zum Gähnen bringen. Und ich hake nach, wo Antworten ins Ungefähre plätschern. All das klappt nur mit profunder journalistischer Vorbereitung und tiefer Recherche. Eine gute Moderation ist für mich dabei immer ein Balanceakt: hartnäckig, aber freundlich; eloquent, aber nicht geschwätzig.
+      </p><p class="mt-6">
+        <span class="italic text-red-400">Referenzen</span> — Deutsche Gesellschaft für Hochschuldidaktik — Hochschuldidaktisches Zentrum Sachsen — Forum Bildung Digitalisierung — München integriert — LMU München
+      </p>
+    </div>
+    <div class="order-first pl-20 xl:order-last lg:w-1/2">
+      <figure>
+        <img loading="lazy" alt="" role="presentation" class="pr-12 mx-auto md:h-auto xl:max-w-xl 2xl:max-w-5xl" src="images/moderation.png">
+      </figure>
+    </div>
+  </div>
+
+    <!-- Footer -->
+    <div class="px-6 m-auto mt-24 text-center md:px-0 xl:mt-64 xl:pb-32">
+      <h2 class="text-5xl 2xl:text-8xl">Was noch? Ansonsten. Servus und Baba.</h2>
+    </div>
+
+    <div class="grid gap-3 px-6 mx-auto mt-20 mb-16 lg:gap-6 2xl:gap-16 md:grid-cols-2 lg:grid-cols-4 md:max-w-none lg:px-20">
+
+      <!-- Kontakt -->
+      <div class="flex-1 py-6 border-t border-gray-300">
+        <h2 class="pb-6 font-sans text-sm font-semibold">Kontakt</h2>
+        <div class="flex-1">
+          <div class="block mt-2">
+            <p>
+              <a href="mailto:mail@anjareiter.com" class="border-b border-transparent hover:text-gray-500 hover:border-gray-800">Mail</a> 
+              <span class="text-anjagreen">•</span> <a href="https://twitter.com/die_anjuschka" class="border-b border-transparent hover:text-gray-500 hover:border-gray-800">Twitter</a> 
+              <span class="text-anjagreen">•</span>  <a href="https://www.facebook.com/anja.reiter" class="border-b border-transparent hover:text-gray-500 hover:border-gray-800">Facebook</a> 
+              <span class="text-anjagreen">•</span> <a href="https://www.instagram.com/reiter.anja/" class="border-b border-transparent hover:text-gray-500 hover:border-gray-800">Instagram</a> 
+              <span class="text-anjagreen">•</span> <a href="https://www.torial.com/anja.reiter" class="border-b border-transparent hover:text-gray-500 hover:border-gray-800">Torial</a>
+            </p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- FotoCredits -->
+      <div class="flex-1 py-6 border-t border-gray-300">
+        <h2 class="pb-6 font-sans text-sm font-semibold">FotoCredits</h2>
+        <div class="flex-1">
+          <div href="#" class="block mt-2">
+            <div>
+              <p><span class="text-anjagreen">•</span> <a href="http://www.joanna.nottebrock.de/" class="border-b border-transparent hover:text-gray-500 hover:border-gray-800">Joanna Nottebrock</a></p>
+              <p><span class="text-anjagreen">•</span> <a href="http://www.lukasbeck.com/" class="border-b border-transparent hover:text-gray-500 hover:border-gray-800">Lukas Beck</a></p>
+              <p><span class="text-anjagreen">•</span> <a href="https://www.paulkranzler.com/" class="border-b border-transparent hover:text-gray-500 hover:border-gray-800">Paul Kranzler</a></p>
+              <p><span class="text-anjagreen">•</span> <a href="https://simadehgani.com/" class="border-b border-transparent hover:text-gray-500 hover:border-gray-800">Sima Deghani</a></p>
+              <p><span class="text-anjagreen">•</span> <a href="https://www.sebastianreiser.com/" class="border-b border-transparent hover:text-gray-500 hover:border-gray-800">Sebastian Reiser</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Legales -->
+      <div class="flex-1 py-6 border-t border-gray-300">
+        <h2 class="pb-6 font-sans text-sm font-semibold">Legales</h2>
+        <div class="flex-1">
+          <div>
+            <p>
+              <a href="impressum.html" class="border-b border-transparent hover:text-gray-500 hover:border-gray-800">Impressum</a>
+            </p>
+            <p>
+              <a href="datenschutz.html" class="border-b border-transparent hover:text-gray-500 hover:border-gray-800">Datenschutz</a>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Design und Umsetzung -->
+      <div class="flex-1 py-6 border-t border-gray-300">
+        <h2 class="pb-6 font-sans text-sm font-semibold">Web</h2>
+        <div class="flex-1">
+          <div href="#" class="block mt-2">
+            <p>
+              Design
+              <a href="https://selinasommer.com" class="flex 2xl:pt-5">
+                <span class="border-b border-transparent hover:text-gray-500 hover:border-gray-800">Selina Sommer</span>
+                <svg alt="" role="presentation" class="mt-1 ml-2 2xl:mt-4" height="30px" width="30px" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                </svg>
+  
+              </a>
+            </p>
+            <p class="mt-12">
+              Umsetzung
+              <a href="https://skryptik.ch" class="flex 2xl:pt-5">
+                <span class="border-b border-transparent hover:text-gray-500 hover:border-gray-800">Skryptik.ch</span>
+                <svg alt="" role="presentation" class="mt-1 ml-2 2xl:mt-4" height="30px" width="30px" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                </svg>
+  
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+</body></html>
