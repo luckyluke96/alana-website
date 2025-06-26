@@ -1,5 +1,17 @@
 /* Minimalistisch-elegantes Layout, moderne Typografie, Serifenschrift */
 
+/* --- Farbvariablen und Grundfarben --- */
+:root {
+  --accent: #b2bddb;
+  --accent-dark: #3b4a6b;
+  --section-bg: #f7f8fa;
+  --section-alt-bg: #fff;
+  --text-main: #222;
+  --text-light: #6c7a99;
+  --shadow: 0 4px 24px rgba(119, 115, 107, 0.176), 0 1.5px 6px rgba(0,0,0,0.03);
+  --radius: 0.7rem;
+}
+
 html {
     box-sizing: border-box;
     font-size: 18px;
@@ -10,9 +22,9 @@ html {
   }
   body {
     margin: 0;
-    font-family: 'Georgia', 'Times New Roman', Times, serif;
+    font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
     background: #fff;
-    color: #222;
+    color: var(--text-main);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -25,8 +37,8 @@ html {
     top: 0;
     left: 0;
     width: 100vw;
-    background: #f4f6fb;
-    border-bottom: 1.5px solid #dbe3f4;
+    background: #9d9389;
+    border-bottom: 1.5px solid #e2d3c0;
     z-index: 1000;
     display: flex;
     align-items: center;
@@ -35,12 +47,13 @@ html {
     height: 5rem;
     letter-spacing: 0.5px;
     font-family: 'Georgia', 'Times New Roman', Times, serif;
+    color: #fff;
   }
   .nav-title {
     font-weight: 600;
     font-size: 1.3rem;
     letter-spacing: 0.5px;
-    color: #2a3a5e;
+    color: #fff;
     font-family: 'Georgia', 'Times New Roman', Times, serif;
   }
   .nav-links {
@@ -52,7 +65,7 @@ html {
   }
   .nav-links a {
     text-decoration: none;
-    color: #3b4a6b;
+    color: #fff;
     font-weight: 400;
     font-size: 1.1rem;
     padding: 0.5rem 0.2rem;
@@ -61,25 +74,23 @@ html {
     font-family: 'Georgia', 'Times New Roman', Times, serif;
   }
   .nav-links a:hover {
-    color: #2a3a5e;
-    text-decoration: underline;
-    text-decoration-color: #b2bddb;
+    color: #e2d3c0;
   }
   
   .container {
     max-width: 1100px;
-    margin: 7.5rem auto 0 auto;
-    padding: 3rem 2rem 4rem 2rem;
+    margin: 8.5rem auto 0 auto;
+    padding: 4rem 4.5rem 4rem 4.5rem;
     background: #fff;
-    border-radius: 0.5rem;
+    border-radius: 0.7rem;
     box-shadow: 0 2px 16px rgba(42,58,94,0.04);
     flex: 1 0 auto;
     font-family: 'Georgia', 'Times New Roman', Times, serif;
   }
   @media (max-width: 700px) {
     .container {
-      margin: 6rem 0 0 0;
-      padding: 1.2rem 0.5rem 2rem 0.5rem;
+      margin: 6.5rem 0 0 0;
+      padding: 1.5rem 0.7rem 2.5rem 0.7rem;
       border-radius: 0;
       box-shadow: none;
     }
@@ -122,15 +133,17 @@ html {
     display: flex;
     flex-direction: column;
     background: #fff;
-    border-radius: 1.2rem;
-    box-shadow: 0 4px 24px rgba(42,58,94,0.07), 0 1.5px 6px rgba(0,0,0,0.03);
-    border: 1.5px solid #dbe3f4;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    border: 1.5px solid #e2d3c0;
     overflow: hidden;
-    transition: box-shadow 0.2s, border-color 0.2s;
+    transition: box-shadow 0.25s, border-color 0.2s, transform 0.18s;
+    padding: 0 2.5rem;
   }
   .article-card:hover {
-    box-shadow: 0 8px 32px rgba(42,58,94,0.13), 0 2px 8px rgba(0,0,0,0.06);
-    border-color: #b2bddb;
+    box-shadow: 0 12px 32px rgba(42,58,94,0.16), 0 2px 8px rgba(0,0,0,0.08);
+    border-color: var(--accent);
+    transform: translateY(-4px) scale(1.02);
   }
   .article-image {
     width: 100%;
@@ -138,6 +151,8 @@ html {
     object-fit: cover;
     background: #e0e0e0;
     display: block;
+    border-radius: var(--radius);
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
   }
   .article-content {
     flex: 1 1 auto;
@@ -175,8 +190,9 @@ html {
     text-align: center;
     font-size: 1rem;
     color: #6c7a99;
-    padding: 3rem 0 2rem 0;
-    background: none;
+    padding: 3.5rem 0 2.5rem 0;
+    background: var(--section-bg);
+    border-top: 1.5px solid #e2d3c0;
     flex-shrink: 0;
     letter-spacing: 1.2px;
     font-family: 'Georgia', 'Times New Roman', Times, serif;
@@ -206,6 +222,7 @@ html {
     gap: 2.5rem;
     margin-top: 2.5rem;
     flex-wrap: wrap;
+    padding: 0 2.5rem;
   }
   .profile-img-placeholder {
     width: 140px;
@@ -233,13 +250,113 @@ html {
     width: 240px;
     height: 240px;
     object-fit: cover;
-    border-radius: 0;
+    border-radius: var(--radius);
     display: block;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
   }
 
   .teaser {
     border-left: 3px solid #b2bddb;
     color: #3b4a6b;
     background: #f7f8fa;
+  }
+
+  /* --- Buttons --- */
+  .button, button, input[type="submit"] {
+    background: var(--accent);
+    color: #fff;
+    border: none;
+    border-radius: var(--radius);
+    padding: 0.7em 1.5em;
+    font-size: 1.08rem;
+    font-family: inherit;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(42,58,94,0.08);
+    transition: background 0.2s, box-shadow 0.2s, transform 0.15s;
+    margin: 0.5em 0;
+    display: inline-block;
+    text-decoration: none;
+  }
+  .button:hover, button:hover, input[type="submit"]:hover {
+    background: var(--accent-dark);
+    box-shadow: 0 4px 16px rgba(42,58,94,0.13);
+    transform: translateY(-2px) scale(1.03);
+  }
+
+  /* --- Akzentfarbe für Links --- */
+  a {
+    color: var(--accent-dark);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    transition: color 0.2s;
+  }
+  a:hover {
+    color: var(--accent);
+  }
+
+  /* --- Section-Trennung: abwechselnde Hintergründe --- */
+  .section {
+    background: var(--section-bg);
+    padding: 3.5rem 0;
+  }
+  .section-alt {
+    background: var(--section-alt-bg);
+    padding: 3.5rem 0;
+  }
+
+  /* --- Microinteractions: Fade-in für Karten --- */
+  .article-card {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.7s ease forwards;
+  }
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+
+  /* --- Social-Links im Footer (optional) --- */
+  .footer-social {
+    margin-top: 1.2rem;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 0 2.5rem;
+  }
+  .footer-social a {
+    color: var(--accent-dark);
+    font-size: 1.3rem;
+    transition: color 0.2s;
+  }
+  .footer-social a:hover {
+    color: var(--accent);
+  }
+
+  /* --- Zitate oder persönliche Note (optional) --- */
+  .quote {
+    font-family: 'Georgia', serif;
+    font-style: italic;
+    color: var(--accent-dark);
+    border-left: 4px solid var(--accent);
+    padding-left: 1.2rem;
+    margin: 2.5rem 0;
+    font-size: 1.18rem;
+    background: #f7f8fa;
+    padding: 1.2rem 2.5rem 1.2rem 2.7rem;
+  }
+
+  #veroeffentlichungen.section {
+    padding: 2rem 2rem;
   } 
+
+  #start.section {
+    padding: 2rem 2rem;
+  } 
+
+  #ueber-mich.section {
+    padding: 2rem 2rem;
+  } 
+
+  
