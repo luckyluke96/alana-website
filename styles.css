@@ -4,7 +4,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: 'Times New Roman', Times, serif
+  flex-direction: column; /* sorgt dafür, dass Text und GIF untereinander stehen */
+  font-family: 'Times New Roman', Times, serif;
   color: #000;
   background: #fff;
 }
@@ -12,4 +13,12 @@ body {
 p {
   font-size: 1.4rem;
   text-align: center;
+  margin: 0;
+}
+
+img.gif {
+  margin-top: 1rem; /* Abstand zwischen Text und GIF */
+  max-width: 300px; /* Größe des GIFs */
+  width: 100%;
+  height: auto;
 }
