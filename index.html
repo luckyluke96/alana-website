@@ -7,9 +7,109 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <p>Hier entsteht gerade die Website von <strong>Alana Tongers</strong>.</p>
-  <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExdHB2YmU2dm5hc3o4OGpud214dWkwcjZlcHJ5cnlyNGk4dGE1azN4NSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/13HBDT4QSTpveU/giphy.gif"
-         alt="Animiertes GIF"
-         class="gif">
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="#about" class="nav-link">Über mich</a>
+      <a href="#publications" class="nav-link">Veröffentlichungen</a>
+      <a href="#contact" class="nav-link">Kontakt</a>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    
+    <!-- About Section -->
+    <section id="about" class="about-section">
+      <div class="about-content">
+        <img src="images/portrait.jpeg" 
+             alt="Alana Tongers" 
+             class="profile-image">
+        
+        <div class="about-text">
+          <h1 class="main-title">Alana Tongers. Journalistin</h1>
+          <p>Alana Tongers lernt im 41. Lehrgang der Henri-Nannen-Schule. Davor hat sie Liberal Arts in Lüneburg und Tallinn studiert.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Publications Section -->
+    <section id="publications" class="publications-section">
+      <h2 class="section-title">Veröffentlichungen</h2>
+      
+      <div class="publications-list" id="publications-container">
+        <!-- Veröffentlichungen werden hier dynamisch geladen -->
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+      <h2 class="section-title">Kontakt</h2>
+      <div class="contact-info">
+        <p><a href="mailto:ihre.email@example.com">ihre.email@example.com</a></p>
+      </div>
+    </section>
+
+  </main>
+
+  <script>
+    // Lade Veröffentlichungen aus der JSON-Datei
+    async function loadPublications() {
+      try {
+        const response = await fetch('publications.json');
+        const data = await response.json();
+        
+        const container = document.getElementById('publications-container');
+        
+        data.forEach(yearGroup => {
+          // Erstelle Jahr-Gruppe
+          const yearDiv = document.createElement('div');
+          yearDiv.className = 'year-group';
+          
+          const yearTitle = document.createElement('h3');
+          yearTitle.className = 'year-title';
+          yearTitle.textContent = yearGroup.year;
+          yearDiv.appendChild(yearTitle);
+          
+          // Erstelle Veröffentlichungen für dieses Jahr
+          yearGroup.publications.forEach(pub => {
+            const pubItem = document.createElement('div');
+            pubItem.className = 'publication-item';
+            
+            const pubLink = document.createElement('a');
+            pubLink.href = pub.url;
+            pubLink.target = '_blank';
+            pubLink.className = 'publication-link';
+            
+            const title = document.createElement('span');
+            title.className = 'publication-title';
+            title.textContent = pub.title;
+            
+            const source = document.createElement('span');
+            source.className = 'publication-source';
+            source.textContent = pub.source;
+            
+            const arrow = document.createElement('span');
+            arrow.className = 'publication-arrow';
+            arrow.textContent = '→';
+            
+            pubLink.appendChild(title);
+            pubLink.appendChild(source);
+            pubLink.appendChild(arrow);
+            
+            pubItem.appendChild(pubLink);
+            yearDiv.appendChild(pubItem);
+          });
+          
+          container.appendChild(yearDiv);
+        });
+      } catch (error) {
+        console.error('Fehler beim Laden der Veröffentlichungen:', error);
+      }
+    }
+    
+    // Lade Veröffentlichungen beim Seitenaufruf
+    document.addEventListener('DOMContentLoaded', loadPublications);
+  </script>
 </body>
 </html>

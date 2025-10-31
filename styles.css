@@ -1,24 +1,265 @@
-body {
+/* Reset und Grundeinstellungen */
+* {
   margin: 0;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column; /* sorgt dafür, dass Text und GIF untereinander stehen */
-  font-family: 'Times New Roman', Times, serif;
-  color: #000;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;200;300;400;500;600;700&display=swap');
+
+body {
+  font-family: 'Roboto Mono', monospace;
+  line-height: 1.6;
+  color: #333;
   background: #fff;
 }
 
-p {
-  font-size: 1.4rem;
-  text-align: center;
-  margin: 0;
+/* Navigation */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.98);
+  z-index: 1000;
+  padding: 1rem 0;
 }
 
-img.gif {
-  margin-top: 1rem; /* Abstand zwischen Text und GIF */
-  max-width: 300px; /* Größe des GIFs */
-  width: 100%;
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  padding: 0 2rem;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #333;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #666;
+}
+
+/* Main Content */
+.main-content {
+  margin-top: 80px; /* Platz für fixed navbar */
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* About Section */
+.about-section {
+  padding: 4rem 0;
+  text-align: left;
+}
+
+.main-title {
+  font-size: 2rem;
+  font-weight: normal;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.5px;
+}
+
+.about-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  text-align: left;
+}
+
+.profile-image {
+  max-width: 300px;
   height: auto;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.about-text {
+  flex: 1;
+}
+
+.about-text p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.7;
+}
+
+/* Publications Section */
+.publications-section {
+  padding: 4rem 0;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: normal;
+  text-align: center;
+  margin-bottom: 3rem;
+  letter-spacing: 0.5px;
+}
+
+.publications-list {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.year-group {
+  margin-bottom: 3rem;
+}
+
+.year-title {
+  font-size: 1.2rem;
+  font-weight: normal;
+  color: #333;
+  margin-bottom: 1.5rem;
+  margin-top: 0;
+}
+
+.publication-item {
+  margin-bottom: 0.5rem;
+}
+
+.publication-link {
+  display: grid;
+  grid-template-columns: 1fr 100px 30px;
+  gap: 2rem;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+  padding: 0.5rem 0;
+  transition: opacity 0.3s ease;
+}
+
+.publication-link:hover {
+  opacity: 0.7;
+}
+
+.publication-title {
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.4;
+  color: #333;
+}
+
+.publication-source {
+  font-size: 0.9rem;
+  color: #666;
+  white-space: nowrap;
+}
+
+.publication-date {
+  font-size: 0.9rem;
+  color: #666;
+  white-space: nowrap;
+  text-align: center;
+}
+
+.publication-meta {
+  font-size: 0.9rem;
+  color: #666;
+  white-space: nowrap;
+}
+
+.publication-arrow {
+  font-size: 1.2rem;
+  color: #666;
+  transition: transform 0.3s ease;
+  justify-self: end;
+}
+
+.publication-link:hover .publication-arrow {
+  transform: translateX(5px);
+}
+
+/* Contact Section */
+.contact-section {
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.contact-info a {
+  text-decoration: none;
+  color: #333;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+.contact-info a:hover {
+  color: #666;
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .nav-container {
+    gap: 2rem;
+    padding: 0 1rem;
+  }
+  
+  .nav-link {
+    font-size: 0.9rem;
+  }
+  
+  .main-content {
+    padding: 0 1rem;
+  }
+  
+  .main-title {
+    font-size: 1.8rem;
+  }
+  
+  .about-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+  }
+  
+  .profile-image {
+    max-width: 250px;
+    height: auto;
+    margin: 0 auto;
+  }
+  
+  .publication-link {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    padding: 0.8rem 0;
+  }
+  
+  .publication-arrow {
+    justify-self: start;
+  }
+  
+  .section-title {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-container {
+    gap: 1.5rem;
+  }
+  
+  .main-title {
+    font-size: 1.5rem;
+  }
+  
+  .profile-image {
+    max-width: 200px;
+    height: auto;
+  }
+  
+  .about-text p {
+    font-size: 1rem;
+  }
 }
