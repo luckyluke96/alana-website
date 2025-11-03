@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://alana-tongers.de/sitemap.xml
+

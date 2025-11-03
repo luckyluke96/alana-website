@@ -3,8 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Alana Tongers</title>
+  <title>Alana Tongers – Journalistin</title>
+  <meta name="description" content="Alana Tongers ist freie Journalistin in Hamburg mit Veröffentlichungen in DIE ZEIT, DER SPIEGEL, FAZ und stern.">
+  <meta name="keywords" content="Alana Tongers, Journalistin, DIE ZEIT, DER SPIEGEL, FAZ, stern, Hamburg">
+  <meta name="author" content="Alana Tongers">
+  
+  <!-- Open Graph / Social Media -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Alana Tongers – Journalistin">
+  <meta property="og:description" content="Journalistin mit Veröffentlichungen in DIE ZEIT, DER SPIEGEL, FAZ und stern.">
+  <meta property="og:image" content="images/portrait.jpeg">
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Alana Tongers – Journalistin">
+  <meta name="twitter:description" content="Journalistin mit Veröffentlichungen in DIE ZEIT, DER SPIEGEL, FAZ und stern.">
+  
   <link rel="stylesheet" href="styles.css">
+  <link rel="canonical" href="alana-tongers.de">
 </head>
 <body>
   <!-- Navigation -->
@@ -12,7 +28,7 @@
     <div class="nav-container">
       <a href="#about" class="nav-link">Über mich</a>
       <a href="#publications" class="nav-link">Veröffentlichungen</a>
-      <a href="#contact" class="nav-link">Kontakt</a>
+      <a href="mailto:mail@alana-tongers.de" class="nav-link">Kontakt</a>
     </div>
   </nav>
 
@@ -28,9 +44,18 @@
         
         <div class="about-text">
           <h1 class="main-title">Alana Tongers. Journalistin</h1>
-          <p>Alana Tongers lernt im 41. Lehrgang der Henri-Nannen-Schule. Davor hat sie Liberal Arts in Lüneburg und Tallinn studiert.</p>
+          <p>Ich arbeite als freie Journalistin in Hamburg. Am liebsten schreibe ich über Kultur und Gesellschaft, meistens irgendwie über beides. 
+            Meine Arbeiten sind unter anderem bei <b>Die ZEIT</b>, <strong>DER SPIEGEL</strong>, der <strong>FAZ</strong> und im <strong>stern</strong> erschienen. </p>
         </div>
       </div>
+
+        <div class="about-content-second">
+          <p>Für meinen Text <strong><a href="https://www.spiegel.de/kultur/musik/open-ground-der-beste-klub-europas-ist-in-wuppertal-a-ea1ae8b4-66be-47bc-97a2-1f5ec75c76fe" target="_blank">
+            „Der beste Klub Europas ist in – Wuppertal?"</a></strong> habe ich 2025 den International Music Journalism Award in der Kategorie „New Perspectives / U30" gewonnen. </p>
+         <p>Vorher habe ich die Henri-Nannen-Schule besucht. <br>
+         Ganz vorher habe Liberal Arts in Lüneburg und Tallinn studiert. <br>
+         Wirklich einiges vorher habe ich andere Dinge getan, die wundervoll waren, aber dazu wann anders mehr.</p>
+        </div>
     </section>
 
     <!-- Publications Section -->
@@ -38,7 +63,6 @@
       <h2 class="section-title">Veröffentlichungen</h2>
       
       <div class="publications-list" id="publications-container">
-        <!-- Veröffentlichungen werden hier dynamisch geladen -->
       </div>
     </section>
 
@@ -46,14 +70,20 @@
     <section id="contact" class="contact-section">
       <h2 class="section-title">Kontakt</h2>
       <div class="contact-info">
-        <p><a href="mailto:ihre.email@example.com">ihre.email@example.com</a></p>
+        <p><a href="mailto:mail@alana-tongers.de">mail@alana-tongers.de</a></p>
       </div>
     </section>
 
   </main>
 
+  <!-- Footer mit Impressum Link -->
+  <footer class="footer">
+    <div class="footer-content">
+      <a href="impressum.html" class="footer-link">Impressum</a>
+    </div>
+  </footer>
+
   <script>
-    // Lade Veröffentlichungen aus der JSON-Datei
     async function loadPublications() {
       try {
         const response = await fetch('publications.json');
@@ -62,7 +92,6 @@
         const container = document.getElementById('publications-container');
         
         data.forEach(yearGroup => {
-          // Erstelle Jahr-Gruppe
           const yearDiv = document.createElement('div');
           yearDiv.className = 'year-group';
           
@@ -71,7 +100,6 @@
           yearTitle.textContent = yearGroup.year;
           yearDiv.appendChild(yearTitle);
           
-          // Erstelle Veröffentlichungen für dieses Jahr
           yearGroup.publications.forEach(pub => {
             const pubItem = document.createElement('div');
             pubItem.className = 'publication-item';
@@ -108,7 +136,6 @@
       }
     }
     
-    // Lade Veröffentlichungen beim Seitenaufruf
     document.addEventListener('DOMContentLoaded', loadPublications);
   </script>
 </body>
