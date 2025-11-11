@@ -98,11 +98,10 @@ h1, h2, h3, h4, h5, h6 {
 
 /* About Section */
 .about-section {
-  padding: 6rem 0;
+  padding: 4rem 0 2rem;
   text-align: left;
   width: 100%;
   animation: fadeIn 0.8s ease-in;
-  min-height: 80vh;
 }
 
 @keyframes fadeIn {
@@ -125,36 +124,37 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: 0.5px;
 }
 
-.about-intro-text {
-  max-width: 1200px;
-  margin: 0 auto 4rem;
-  padding: 0 2rem;
-  animation: slideInLeft 0.8s ease-out 0.2s both;
-}
-
-.about-intro-text p {
-  font-size: 1.4rem;
-  line-height: 1.9;
-  font-weight: 400;
-  color: #333;
-  max-width: 1200px;
-}
-
 .about-content {
-  background: var(--background-color);
   width: 100%;
   padding: 3rem 0;
   animation: slideInLeft 0.8s ease-out 0.4s both;
 }
 
 .about-content-inner {
-  display: grid;
-  grid-template-columns: 400px 1fr;
-  gap: 4rem;
-  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 1000px;
   margin: 0 auto;
   padding: 0 2rem;
+}
+
+.about-top-row {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 2rem;
   align-items: start;
+}
+
+.about-intro-text {
+  animation: slideInLeft 0.8s ease-out 0.2s both;
+}
+
+.about-intro-text p {
+  font-size: 1.1rem;
+  line-height: 1.9;
+  font-weight: 400;
+  color: #333;
 }
 
 @keyframes slideInLeft {
@@ -215,7 +215,7 @@ h1, h2, h3, h4, h5, h6 {
 .about-text {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 0.8rem;
 }
 
 .about-text p {
@@ -232,7 +232,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Publications Section */
 .publications-section {
-  padding: 4rem 0 0;
+  padding: 2rem 0 0;
 }
 
 .section-title {
@@ -388,7 +388,7 @@ h1, h2, h3, h4, h5, h6 {
 .footer {
   padding: 2rem 0;
   text-align: center;
-  background: var(--background-color);
+  background: #eeeeee00;
   border-top: 1px solid #eee;
 }
 
@@ -438,17 +438,17 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 1.8rem;
   }
   
-  .about-intro-text {
-    margin-bottom: 2rem;
+  .about-content-inner {
+    gap: 2rem;
+  }
+  
+  .about-top-row {
+    grid-template-columns: 1fr;
+    gap: 2rem;
   }
   
   .about-intro-text p {
     font-size: 1rem;
-  }
-  
-  .about-content-inner {
-    grid-template-columns: 1fr;
-    gap: 2rem;
   }
   
   .about-text p {
