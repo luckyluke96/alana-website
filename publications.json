@@ -9,10 +9,11 @@
         "url": "https://www.stern.de/politik/deutschland/rechtsextremismus-an-schulen--grosse-pause--hitlergruss-36138438.html"
       },
       {
-        "title": "Rechtsextremismus: Viele Lehrer wünschen sich mehr Unterstützung",
-        "source": "stern",
-        "date": "30. Oktober",
-        "url": "https://www.stern.de/politik/deutschland/rechtsextremismus--viele-lehrer-wuenschen-sich-mehr-unterstuetzung-36138476.html"
+        "title": "Geschichten vom Kieferschmerz: Das wird jetzt kurz wehtun",
+        "source": "FAZ",
+        "date": "16. Oktober",
+        "url": "https://www.faz.net/aktuell/feuilleton/buecher/literatur/in-pathemata-werden-kieferschmerzen-zu-literatur-andere-schmerzen-liegen-tiefer-accg-110723159.html"
+
       },
       {
         "title": "Freiwillige Feuerwehr: \"Die Menschen, die du nicht retten kannst, vergisst du nie\"",
@@ -33,12 +34,6 @@
         "url": "https://www.faz.net/aktuell/feuilleton/musik-und-buehne/indie-folk-band-big-thief-und-ihr-neues-album-double-infinity-accg-110659029.html"
       },
       {
-        "title": "Ein prominenter Fall: The Weeknd",
-        "source": "stern",
-        "date": "29. August",
-        "url": "https://www.stern.de/panorama/verbrechen/stern-crime/prominente/ein-prominenter-fall--the-weeknd-35101348.html"
-      },
-      {
         "title": "Musiker Disarstar: Wer bin ich, wenn ich nicht rappe?",
         "source": "DER SPIEGEL",
         "date": "28. August",
@@ -51,7 +46,7 @@
         "url": "https://www.stern.de/geo/tour-de-france--der-tag--an-dem-tom-simpson-starb-35885528.html"
       },
       {
-        "title": "Autorin Torrey Peters über die USA unter Trump",
+        "title": "Interview:Autorin Torrey Peters über die USA unter Trump",
         "source": "DER SPIEGEL",
         "date": "22. Juni",
         "url": "https://www.spiegel.de/kultur/literatur/torrey-peters-im-interview-sie-wollen-dass-ich-angst-habe-a-217d7a1f-4fc9-44e7-bcdd-ef87b8fade0b"
@@ -69,7 +64,7 @@
         "url": "https://www.spiegel.de/kultur/open-ground-der-beste-klub-europas-ist-in-wuppertal-a-fbd8422b-83c2-4939-8c94-40d15ecf54a4"
       },
       {
-        "title": "Der Männerschubser von Kiental",
+        "title": "Die Schlucht",
         "source": "stern",
         "date": "26. April",
         "url": "https://www.stern.de/panorama/verbrechen/stern-crime/fallgeschichten/der-maennerschubser-von-kiental-35643796.html"
@@ -129,52 +124,10 @@
         "url": "https://www.spiegel.de/kultur/body-positivity-lizzo-selena-gomez-hollywood-auf-diaet-a-b38b1c32-86be-45d4-a679-483eafd23c5e"
       },
       {
-        "title": "Aus der Asservatenkammer: Das Pflaster, mit dem Betsy Buckwitz erdrosselt wurde",
-        "source": "stern",
-        "date": "12. Februar",
-        "url": "https://www.stern.de/panorama/verbrechen/stern-crime/asservat/aus-der-asservatenkammer--das-pflaster--mit-dem-betsy-buckwitz-erdrosselt-wurde-35456242.html"
-      },
-      {
-        "title": "Karneval: \"Auf einer Messe habe ich Taliban-Kostüme gesehen\"",
-        "source": "DIE ZEIT",
-        "date": "18. Februar",
-        "url": "https://www.zeit.de/2025/07/karneval-fasching-kostueme-geschaeft-verkleidung-hamburg"
-      },
-      {
-        "title": "Ein prominenter Fall: Shaun White, Snowboard-Superstar",
-        "source": "stern",
-        "date": "1. Februar",
-        "url": "https://www.stern.de/panorama/verbrechen/stern-crime/prominente/ein-prominenter-fall--shaun-white--snowboard-superstar-35403244.html"
-      },
-      {
-        "title": "Ältester Stammtisch DeutschlandsUnter Männern",
+        "title": "Ältester Stammtisch Deutschlands: Unter Männern",
         "source": "DIE ZEIT",
         "date": "26. Januar",
         "url": "https://www.zeit.de/2025/04/aeltester-stammtisch-deutschlands-klausenbrueder-osnabrueck"
-      },
-      {
-        "title": "Babyklappe: \"Da sah ich, dass die Puppe sich bewegte\"",
-        "source": "DIE ZEIT",
-        "date": "13. Januar",
-        "url": "https://www.zeit.de/2025/02/babyklappe-saeugling-kind-eltern-jugendamt"
-      },
-      {
-        "title": "Zukunftsprognosen: Wenn's nach Nostradamus geht, wird 2025 ganz wunderbar",
-        "source": "DIE ZEIT",
-        "date": "12. Januar",
-        "url": "https://www.zeit.de/2025/02/zukunftsprognosen-technologie-entwicklung-vorhersage"
-      },
-      {
-        "title": "Ein prominenter Fall: Nicki Minaj, die \"Queen of Rap\"",
-        "source": "stern",
-        "date": "5. Januar",
-        "url": "https://www.stern.de/panorama/verbrechen/stern-crime/prominente/ein-prominenter-fall--nicki-minaj--die--queen-of-rap--35315016.html"
-      },
-      {
-        "title": "Triangel spielen: \"Viele können kaum glauben, dass das mein Beruf ist\"",
-        "source": "DIE ZEIT",
-        "date": "4. Januar",
-        "url": "https://www.zeit.de/2025/01/triangel-spielen-orchester-muenchner-philharmoniker"
       }
     ]
   },

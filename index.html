@@ -21,6 +21,10 @@
   
   <link rel="stylesheet" href="styles.css">
   <link rel="canonical" href="alana-tongers.de">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/ellipse.png">
+  <link rel="apple-touch-icon" href="images/ellipse.png">
 </head>
 <body>
   <!-- Navigation -->
@@ -72,9 +76,10 @@
 
     <!-- Publications Section -->
     <section id="publications" class="publications-section">
-      <h2 class="section-title">Texte</h2>
+      
       
       <div class="publications-wrapper">
+        <h2 class="section-title">Texte</h2>
         <div class="publications-list" id="publications-container">
         </div>
       </div>
@@ -105,14 +110,12 @@
         
         const container = document.getElementById('publications-container');
         
-        data.forEach(yearGroup => {
+        // Filter nur für Jahr 2025
+        const filteredData = data.filter(yearGroup => yearGroup.year === "2025");
+        
+        filteredData.forEach(yearGroup => {
           const yearDiv = document.createElement('div');
           yearDiv.className = 'year-group';
-          
-          const yearTitle = document.createElement('h3');
-          yearTitle.className = 'year-title';
-          yearTitle.textContent = yearGroup.year;
-          yearDiv.appendChild(yearTitle);
           
           yearGroup.publications.forEach(pub => {
             const pubItem = document.createElement('div');
