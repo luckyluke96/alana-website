@@ -3,10 +3,22 @@
     "year": "2026",
     "publications": [
       {
-        "title": "Feminismus und »Hannah Montana: Zwischen Taylor Swift und Miley Cyrus – was sollte man tun, um keine Schlampe zu sein?",
+        "title": "Zwischen Taylor Swift und Miley Cyrus – was sollte man tun, um keine Schlampe zu sein?",
         "source": "DER SPIEGEL",
         "date": "04. April",
         "url": "https://www.spiegel.de/kultur/20-jahre-hannah-montana-wieder-maedchen-sein-a-5a4f6b05-e619-40f9-a776-c766b829c8c3"
+      },
+      {
+        "title": "Die Theorie vom \"idealen Opfer\": Über die Grenzen unseres Mitgefühls",
+        "source": "stern",
+        "date": "01. April",
+        "url": "https://www.stern.de/panorama/verbrechen/stern-crime/essays/die-theorie-vom--idealen-opfer---ueber-die-grenzen-unseres-mitgefuehls-37237970.html"
+      },
+      {
+        "title": "Eisbaden: Wieso ein Bad bei vier Grad Wassertemperatur glücklich macht",
+        "source": "stern",
+        "date": "14. Januar",
+        "url": "https://www.stern.de/gesundheit/eisbaden--wieso-ein-bad-bei-vier-grad-wassertemperatur-gluecklich-macht-37022664.html"
       }
     ]
   },
